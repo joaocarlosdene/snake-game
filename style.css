@@ -4,7 +4,7 @@
     box-sizing: border-box;
     overflow: hidden;
 }
-body{
+.index{
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -14,7 +14,7 @@ body{
     align-items: center;
    
 }
-img{
+.img{
     animation: zoom 20s;
     opacity: 50;
     width: 100%;
@@ -33,7 +33,7 @@ img{
 h1{
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.74);
-    color: blue;
+    color:red;
     font-size: 2rem; 
     opacity: 0;
     animation: chegandoescrita 0s 1.3s both ;
@@ -113,3 +113,19 @@ button{
     }
 }
 /*----------------------------------------------------------------------*/
+/*--------------------------PAGINA JOGO.HTML------------------------------*/
+
+#stage{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 10%;
+}
+.jogo{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    color: whitesmoke;
+    justify-content: center;
+    display: flex;
+}

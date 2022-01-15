@@ -1,9 +1,12 @@
 window.onload = function(){
     var stage = document.getElementById('stage')
     var ctx = stage.getContext("2d")
+    document.addEventListener("keydown", keypush)
 
-    setInterval(game, 60)
+    
+    setInterval(game, 150)
 
+    
     const vel = 1
 
     var vx = vy = 0
@@ -12,6 +15,7 @@ window.onload = function(){
     var tp = 20
     var qp = 20
     var ax = ay = 15
+    var score = 0
 
     var trail = []
     var tail = 5
@@ -37,6 +41,10 @@ window.onload = function(){
         ctx.fillStyle = "black"
         ctx.fillRect(0,0, stage.width, stage.height)
 
+        ctx.fillStyle = "red"
+        ctx.font = '100px "serif"'
+        ctx.fillText = ('hello world', 50, 90)
+
         ctx.fillStyle = "red";
         ctx.fillRect(ax*tp, ay*tp, tp,tp)
 
@@ -46,22 +54,45 @@ window.onload = function(){
 
             if(trail[i].x == px && trail[i].y ==py){ //onde acontece o game over
                 vx = vy = 0
+                tail = 5
             }
         }
-        trail.push({x:px, y:px})
+        trail.push({x:px, y:py})
         while (trail.length > tail){
             trail.shift()
         }
 
-        if (ax == px && ay ==py){
+        if (ax == px && ay == py){
             tail++
+            score++
             ax = Math.floor(Math.random()*qp)
             ay = Math.floor(Math.random()*qp)
         }
     }
-
     
-
+    
+    function keypush (event){
+        switch (event.keyCode) {
+            case 37://left
+                vx = -vel
+                vy = 0
+                break;
+            case 38://up
+                vx = 0
+                vy = -vel
+                break;
+            case 39://right
+                vx = vel
+                vy = 0
+                break;
+            case 40://down
+                vx = 0
+                vy = vel
+                break;
+            default:
+                break;
+        }
+    }
 
 
 

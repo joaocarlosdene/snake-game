@@ -41,8 +41,9 @@ window.onload = function(){
         ctx.fillStyle = "black"
         ctx.fillRect(0,0, stage.width, stage.height)
 
+        document.getElementById('score').innerHTML = 'Pontos: ' + score;
         ctx.fillStyle = "red"
-        ctx.font = '100px "serif"'
+        ctx.font = '50px "serif"'
         ctx.fillText = ('hello world', 50, 90)
 
         ctx.fillStyle = "red";

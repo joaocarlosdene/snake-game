@@ -46,7 +46,7 @@ window.onload = function(){
         ctx.font = '50px "serif"'
         ctx.fillText = ('hello world', 50, 90)
 
-        ctx.fillStyle = "red";
+        ctx.fillStyle = 'red';
         ctx.fillRect(ax*tp, ay*tp, tp,tp)
 
         ctx.fillStyle = "green"

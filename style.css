@@ -190,9 +190,5 @@ p{
         height: 300px;
     }
 }
-@media (max-height:615px){
-    .button{
-        top: 67%;
-    }
-}
+
 }

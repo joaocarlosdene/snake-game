@@ -50,7 +50,7 @@ window.onload = function(){
 
         ctx.fillStyle = "green"
         for (let i = 0; i < trail.length; i++) {
-            ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp, tp)
+            ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-2, tp-2)
 
             if(trail[i].x == px && trail[i].y ==py){ //onde acontece o game over
                 vx = vy = 0

@@ -1,7 +1,18 @@
 window.onload = function(){
     var stage = document.getElementById('stage')
     var ctx = stage.getContext("2d")
+    
+    
+    var up = document.querySelector('.button1')
+    var left = document.querySelector('.button2')
+    var right = document.querySelector('.button3')
+    var down = document.querySelector('.button4')
+    
+
+    document.addEventListener("mousedown", jogando)
     document.addEventListener("keydown", keypush)
+
+
 
     
     setInterval(game, 150)
@@ -71,7 +82,25 @@ window.onload = function(){
         }
     }
     
-    
+    function jogando (event){
+        
+        up.addEventListener("mousedown", function(){
+            vx = 0
+            vy = -vel
+        })
+        left.addEventListener("mousedown", function(){
+            vx = -vel
+            vy = 0
+        })
+        right.addEventListener("mousedown", function(){
+            vx = vel
+            vy = 0
+        })
+        down.addEventListener("mousedown", function(){
+            vx = 0
+            vy = vel
+        })
+    }
     function keypush (event){
         switch (event.keyCode) {
             case 37://left
@@ -94,7 +123,5 @@ window.onload = function(){
                 break;
         }
     }
-
-
 
 }

@@ -1,6 +1,8 @@
 window.onload = function(){
     var stage = document.getElementById('stage')
     var ctx = stage.getContext("2d")
+    var maca = new Image ()
+    maca.src = '../maca.png'
     
     
     var up = document.querySelector('.button1')
@@ -71,8 +73,10 @@ window.onload = function(){
         ctx.font = "25px sherif"
         ctx.fillText(score, 340, 30)
         
-        ctx.fillStyle = 'red';
-        ctx.fillRect(ax*tp, ay*tp, tp,tp)
+        ctx.drawImage(maca, ax*tp, ay*tp, tp,tp)
+       
+        /*ctx.fillStyle = 'red'; // codigo para voltar peça vermelha
+        ctx.fillRect(ax*tp, ay*tp, tp,tp)*/
 
         ctx.fillStyle = "green"
         for (let i = 0; i < trail.length; i++) {

@@ -168,7 +168,7 @@ p{
     background-color: rgba(0, 0, 0, 0.288);
 
 }
-@media (max-width:700px), (max-height:700px){
+@media (max-width:700px){
     #stage{
         width: 400px;
         height: 400px;
@@ -177,6 +177,9 @@ p{
     .jogo{
         top: -2%;
     }
+    .button{
+        top: 50%;
+    }
     .button2, .button3{
         margin-right: 15px;
         margin-left: 15px;
@@ -184,10 +187,10 @@ p{
     .button1, .button2, .button3, .button4{
         padding: 0.6rem 1rem;
     }
-@media (max-width:380px){
+@media (max-width:393px){
     #stage{
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
     }
 }
 

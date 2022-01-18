@@ -9,12 +9,27 @@ window.onload = function(){
     var down = document.querySelector('.button4')
     
 
-    document.addEventListener("mousedown", jogando)
+
+
+    up.addEventListener("mousedown", function(){
+        vx = 0
+        vy = -vel
+    })
+    left.addEventListener("mousedown", function(){
+        vx = -vel
+        vy = 0
+    })
+    right.addEventListener("mousedown", function(){
+        vx = vel
+        vy = 0
+    })
+    down.addEventListener("mousedown", function(){
+        vx = 0
+        vy = vel
+    })
+    
     document.addEventListener("keydown", keypush)
 
-
-
-    
     setInterval(game, 150)
 
     
@@ -52,11 +67,10 @@ window.onload = function(){
         ctx.fillStyle = "black"
         ctx.fillRect(0,0, stage.width, stage.height)
 
-        document.getElementById('score').innerHTML = 'Pontos: ' + score;
-        ctx.fillStyle = "red"
-        ctx.font = '50px "serif"'
-        ctx.fillText = ('hello world', 50, 90)
-
+        ctx.fillStyle = "white"
+        ctx.font = "25px sherif"
+        ctx.fillText(score, 340, 30)
+        
         ctx.fillStyle = 'red';
         ctx.fillRect(ax*tp, ay*tp, tp,tp)
 
@@ -67,6 +81,7 @@ window.onload = function(){
             if(trail[i].x == px && trail[i].y ==py){ //onde acontece o game over
                 vx = vy = 0
                 tail = 5
+                score = 0
             }
         }
         trail.push({x:px, y:py})
@@ -76,31 +91,13 @@ window.onload = function(){
 
         if (ax == px && ay == py){
             tail++
-            score++
+            score = score + 20
             ax = Math.floor(Math.random()*qp)
             ay = Math.floor(Math.random()*qp)
         }
     }
     
-    function jogando (event){
-        
-        up.addEventListener("mousedown", function(){
-            vx = 0
-            vy = -vel
-        })
-        left.addEventListener("mousedown", function(){
-            vx = -vel
-            vy = 0
-        })
-        right.addEventListener("mousedown", function(){
-            vx = vel
-            vy = 0
-        })
-        down.addEventListener("mousedown", function(){
-            vx = 0
-            vy = vel
-        })
-    }
+    
     function keypush (event){
         switch (event.keyCode) {
             case 37://left

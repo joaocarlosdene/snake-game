@@ -24,28 +24,8 @@
     var down = document.querySelector('.button4')
     
 
-    setInterval(game, 300)
+    setInterval(game, 220)
 
-    
-
-    up.addEventListener("mousedown", function(){
-        vx = 0
-        vy = -vel
-    })
-    left.addEventListener("mousedown", function(){
-        vx = -vel
-        vy = 0
-    })
-    right.addEventListener("mousedown", function(){
-        vx = vel
-        vy = 0
-    })
-    down.addEventListener("mousedown", function(){
-        vx = 0
-        vy = vel
-    })
-    
-    document.addEventListener("keydown", keypush)
 
     
 
@@ -134,6 +114,24 @@
         }
     }
     
+    up.addEventListener("mousedown", function(){
+        vx = 0
+        vy = -vel
+    })
+    left.addEventListener("mousedown", function(){
+        vx = -vel
+        vy = 0
+    })
+    right.addEventListener("mousedown", function(){
+        vx = vel
+        vy = 0
+    })
+    down.addEventListener("mousedown", function(){
+        vx = 0
+        vy = vel
+    })
+    
+    document.addEventListener("keydown", keypush)
     function keypush (event){
         switch (event.keyCode) {
             case 37://left

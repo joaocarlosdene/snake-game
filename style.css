@@ -166,7 +166,7 @@ p{
     padding: 1rem 3rem;
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(255, 255, 240, 0);
+    border-color: rgb(253, 253, 253);
 }
 @media (max-width:700px){
     #stage{

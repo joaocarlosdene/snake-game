@@ -24,7 +24,7 @@
     var down = document.querySelector('.button4')
     
 
-    setInterval(game, 220)
+    setInterval(game, 300)
 
 
     
@@ -85,13 +85,16 @@
                 tail = 5
                 score = 0
                 over = true
+                
 
                 if(over = true){
                     ctx.fillStyle = "white"
                     ctx.font = "35px Arial"
                     ctx.fillText('GAME OVER', 95, 200)
                     
-                                    
+                    ctx.fillStyle = "white"
+                    ctx.font = "20px Arial"
+                    ctx.fillText(`RECORD: ${record}`, 140, 220)           
                 }
                 
                
